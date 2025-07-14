@@ -1,46 +1,31 @@
 # Sequence Cleaner
-
 This module validates and analyzes raw DNA sequences for use in genomic workflows.
 
-## 🚀 Features
-
+##  Features
 - Detects invalid characters in sequences
 - Filters out non-ATGC sequences
 - Calculates GC content of valid sequences
 - Prints summary statistics
 
-## 📂 Input Format
-
-A plain `.txt` file with **one DNA sequence per line**:
-
- 🛠️ How to Use
+##How to Use
 
 1. Prepare a plain text file with one sequence per line. Example:
 ATGCGTAC
 ATGNXGTA
 GCTARGATN
-
 2. Use the `sequence_summary()` function to analyze:
-
 from sequence_cleaner import sequence_summary
-
 sequence_summary("example_sequences.txt")
----
-
-### FASTA Summary
+!!!!   ### FASTA Summary function added
 from sequence_cleaner import fasta_summary
 fasta_summary("example_fasta.fa")
 
-
 It will print:
+•	Total number of sequences
+•	Number of valid sequences
+•	Average GC content
+•	Invalid sequences and problematic characters
 
-* Total number of sequences
-
-* Number of valid sequences
-
-* Average GC content
-
-* Invalid sequences and problematic characters
 
 Output Example: 
 Total sequences: 6
