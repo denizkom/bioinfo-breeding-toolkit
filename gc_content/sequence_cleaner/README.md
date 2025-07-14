@@ -16,6 +16,7 @@ GCTARGATN
 2. Use the `sequence_summary()` function to analyze:
 from sequence_cleaner import sequence_summary
 sequence_summary("example_sequences.txt")
+
 !!!!   ### FASTA Summary function added
 from sequence_cleaner import fasta_summary
 fasta_summary("example_fasta.fa")
