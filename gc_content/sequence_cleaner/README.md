@@ -25,17 +25,22 @@ GCTARGATN
 from sequence_cleaner import sequence_summary
 
 sequence_summary("example_sequences.txt")
+---
+
+### FASTA Summary
+from sequence_cleaner import fasta_summary
+fasta_summary("example_fasta.fa")
 
 
 It will print:
 
-- Total number of sequences
+* Total number of sequences
 
-- Number of valid (clean) sequences
+* Number of valid sequences
 
-- Average GC content
+* Average GC content
 
-- List of invalid sequences and characters
+* Invalid sequences and problematic characters
 
 Output Example: 
 Total sequences: 6
