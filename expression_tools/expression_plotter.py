@@ -1,12 +1,40 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Visualizes expression levels of a specific gene from a GEO matrix file.
-Draws a barplot with per-sample values, includes a red dashed mean line,
-and adds a summary table below the chart.
+expression_plotter.py
 
-@author: denizkom and used ChatGPT for correction and providing definations. 
+Author: Deniz Kom  
+Contributor: ChatGPT (OpenAI), for collaborative code development and documentation
+
+Created: July 2025
+
+Description:
+------------
+This script visualizes the expression profile of a selected gene across multiple samples
+using data from a GEO Series Matrix (.txt) file.
+
+It performs the following steps:
+1. Loads the tab-separated matrix file and cleans column headers.
+2. Selects a specific gene using its ID (e.g., '171723_x_at').
+3. Extracts expression values across all samples.
+4. Calculates and prints the average expression level.
+5. Plots a bar chart with expression levels per sample.
+6. Adds data labels to each bar and includes a table of values below the chart.
+
+Requirements:
+-------------
+- pandas
+- matplotlib
+
+How to Use:
+-----------
+- Set `gene_id` to the target gene (e.g., '171723_x_at').
+- Ensure the GEO matrix file is named 'GSE70509_series_matrix.txt' and located in the same directory.
+- Run the script in a Python environment that supports matplotlib visualization.
+
+This script is part of the `expression_tools/` module of the Bioinfo Breeding Toolkit.
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
